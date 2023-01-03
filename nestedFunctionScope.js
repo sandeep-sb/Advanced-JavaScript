@@ -1,8 +1,8 @@
-a = 10;
+let a = 10;
 function outer() {
-  b = 20;
+  let b = 20;
   function inner() {
-    c = 30;
+    let c = 30;
     console.log(a, b, c);
   }
   inner();
@@ -28,5 +28,10 @@ finds variable a there. Now 10 is logged in the terminal.
 
 => When functions are nested, JS variable lookup starts from the innermost function, where we are trying to access those 
 variables, and moves outwards until it reaches the global scope.
+
+=> The inner() function will have access to all the variables in its scope(Its scope being all the variables inside the 
+outer() function.)
+
+>>> Next up - *****Closures*****
 
 */
