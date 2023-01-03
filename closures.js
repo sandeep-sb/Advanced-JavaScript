@@ -1,5 +1,11 @@
 /**
  * Previously we saw how nested function scoping worked. We'll now see how Closures work.
+ * 
+ * In JavaScript, when we return a function from another function, we are effectively 
+ * returning a combination of the function definition along with the function's scope.
+ * This would let the function definition have an associated persistent memory which could
+ * hold on too live data between executions. This combination of the function definition 
+ * and its scope is what is called a closure in JavaScript.
  */
 
 function outer() {
@@ -48,7 +54,7 @@ fn();
  * ---Working---
  *
  * The 1st line to execute is line 37, where outer() function is invoked and the reference to the inner() function
- * is assigned to variable fn. This fn is called a closure(check definition below).
+ * is assigned to variable fn. This fn is called a closure.
  *
  * In C++/Java, what happens is as soon as outer() function is executed, the variables declared inside its scope are inaccessible.
  * But in JS, the inner functions can access the variables declared in its scope(i.e., scope of the inner function).
